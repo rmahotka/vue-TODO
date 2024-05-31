@@ -1,8 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@/views/HomeView.vue'
-import AboutView from '@/views/AboutView.vue'
+import HomeView from '@/pages/HomeView.vue'
+import AboutView from '@/pages/AboutView.vue'
 
 const router = createRouter({
+  linkActiveClass:'active',
+  linkExactActiveClass: 'nav-link-active',
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {

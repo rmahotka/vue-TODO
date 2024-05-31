@@ -2,3 +2,25 @@
   padding: 0;
   margin: 0;
 }
+
+html{
+    font-family: "Reddit Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+}
+
+.nav-link-active {
+  color: #00c16a !important;
+}
+
+.nav-link-active::after {
+  content: '' !important;
+  position: absolute !important;
+  background: #00c16a !important;
+  height: 2px !important;
+  border-radius: 1px !important;
+  width: 100% !important;
+  bottom: 0 !important;
+  left: 0 !important;
+}

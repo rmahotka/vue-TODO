@@ -1,11 +1,15 @@
 <template>
   <header>
     <div class="wrapper">
-      <p class="logo">TODO</p>
-      <nav class="nav">
-        <RouterLink class="nav-link" to="/">Home</RouterLink>
-        <RouterLink class="nav-link" to="/about">About</RouterLink>
-      </nav>
+      <p class="logo">
+        <span class="logo-title">TODO</span> <span class="logo-subtitle">list</span>
+      </p>
+      <div>
+        <nav class="nav">
+          <RouterLink class="nav-link" to="/">Home</RouterLink>
+          <RouterLink class="nav-link" to="/about">About</RouterLink>
+        </nav>
+      </div>
     </div>
   </header>
 </template>
@@ -16,17 +20,25 @@ import { RouterLink } from 'vue-router'
 
 <style scoped>
 .wrapper {
-  background-color: #c70074;
-  padding: 12px 14px;
+  padding-top: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .logo {
-  color: #fefefe;
+  color: #00dc82;
+}
+
+.logo-title {
+  color: #fff;
+  font-size: 30px;
   font-weight: bold;
-  font-size: 20px;
+  padding-right: 3px;
+}
+
+.logo-subtitle {
+  font-size: 18px;
 }
 
 .nav {
@@ -36,13 +48,30 @@ import { RouterLink } from 'vue-router'
 
 .nav-link {
   position: relative;
-  padding: 8px 8px 1px 8px;
-  font-size: 18px;
+  padding: 8px 8px 4px 8px;
+  font-size: 24px;
   text-decoration: none;
-  color: #fefefe;
+  color: #fff;
+  transition: all ease 0.3s;
 }
 
 .nav-link:hover {
-  border-bottom: 1px solid #fff;
+  color: #00c16a;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  background: #00c16a;
+  height: 2px;
+  border-radius: 1px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
 </style>
