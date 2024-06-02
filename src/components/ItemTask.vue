@@ -1,7 +1,7 @@
 <template>
   <div class="item-block" @click="compliteTask(props.task.id)">
     <p class="item-block-text">
-      <i class="pi pi-check" v-if="props.task.status" />
+      <i class="pi pi-check" :class="{ active: props.task.status }" />
       <span :class="{ compluted: props.task.status }">{{ props.task.text }}</span>
     </p>
     <i class="pi pi-trash delete-tast" @click.stop="deleteTask(props.task.id)" />
@@ -49,6 +49,19 @@ const deleteTask = (id: number) => {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.item-block-text i {
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.item-block:hover i {
+  opacity: 0.6;
+}
+
+.item-block-text i.active {
+  opacity: 1;
 }
 
 .delete-tast {
