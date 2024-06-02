@@ -38,7 +38,7 @@ import { RouterLink } from 'vue-router'
 }
 
 .logo-subtitle {
-  font-size: 18px;
+  font-size: 23px;
 }
 
 .nav {

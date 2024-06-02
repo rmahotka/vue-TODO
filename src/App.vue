@@ -21,6 +21,6 @@ import HeaderItem from '@/components/HeaderItem.vue'
 }
 
 .content {
-  margin-top: 40px;
+  margin-top: 80px;
 }
 </style>

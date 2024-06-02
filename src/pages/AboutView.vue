@@ -1,7 +1,11 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="about-block">
+    <h1>This is my first project using Vue 3 and Typescript</h1>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.about-block {
+  text-align: center;
+}
+</style>

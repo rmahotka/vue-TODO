@@ -3,11 +3,11 @@
   margin: 0;
 }
 
-html{
-    font-family: "Reddit Sans", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 400;
-      font-style: normal;
+html {
+  font-family: 'Reddit Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .nav-link-active {
@@ -23,4 +23,20 @@ html{
   width: 100% !important;
   bottom: 0 !important;
   left: 0 !important;
+}
+
+.complitedStatus {
+  position: relative;
+}
+
+.complitedStatus::after {
+  content: '';
+  display: flex;
+  justify-content: center;
+  top: 50%;
+  left: 2%;
+  width: 95%;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
 }
