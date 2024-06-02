@@ -32,5 +32,3 @@ const compliteTask = (id: number) => {
   width: 100%;
 }
 </style>
-
-<!-- :class="{ complitedStatus: task.status }" -->

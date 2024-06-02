@@ -137,6 +137,7 @@ const sortTask = (status: btnStatus) => {
   margin-top: 40px;
   font-size: 25px;
   opacity: 0.7;
+  margin-bottom: 30px;
 }
 
 .empty-list {
