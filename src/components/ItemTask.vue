@@ -1,6 +1,9 @@
 <template>
   <div class="item-block" @click="compliteTask(props.task.id)">
-    <p>{{ props.task.text }}</p>
+    <p class="item-block-text">
+      <i class="pi pi-check" v-if="props.task.status" />
+      <span :class="{ compluted: props.task.status }">{{ props.task.text }}</span>
+    </p>
     <i class="pi pi-trash delete-tast" @click.stop="deleteTask(props.task.id)" />
   </div>
 </template>
@@ -27,6 +30,10 @@ const deleteTask = (id: number) => {
 </script>
 
 <style scoped>
+.compluted {
+  text-decoration: line-through;
+}
+
 .item-block {
   display: flex;
   align-items: center;
@@ -36,6 +43,12 @@ const deleteTask = (id: number) => {
   padding: 15px 30px;
   border-radius: 12px;
   cursor: pointer;
+}
+
+.item-block-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .delete-tast {

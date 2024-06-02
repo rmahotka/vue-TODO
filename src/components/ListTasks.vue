@@ -21,12 +21,7 @@ const compliteTask = (id: number) => {
 </script>
 
 <template>
-  <div
-    v-for="task in tasks"
-    :key="task.id"
-    class="list-block"
-    :class="{ complitedStatus: task.status }"
-  >
+  <div v-for="task in tasks" :key="task.id" class="list-block">
     <ItemTask :task="task" @delete-task="deleteItem" @complite-task="compliteTask" />
   </div>
 </template>
@@ -37,3 +32,5 @@ const compliteTask = (id: number) => {
   width: 100%;
 }
 </style>
+
+<!-- :class="{ complitedStatus: task.status }" -->
