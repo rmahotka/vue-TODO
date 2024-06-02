@@ -8,6 +8,10 @@ html {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  background-color: #090f26;
+  color: #fff;
+  height: 100%;
+  padding: 0 50px;
 }
 
 .nav-link-active {

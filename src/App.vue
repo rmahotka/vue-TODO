@@ -4,22 +4,13 @@ import HeaderItem from '@/components/HeaderItem.vue'
 </script>
 
 <template>
-  <div class="container">
-    <HeaderItem />
-    <div class="content">
-      <RouterView />
-    </div>
+  <HeaderItem />
+  <div class="content">
+    <RouterView />
   </div>
 </template>
 
 <style scoped>
-.container {
-  background-color: #090f26;
-  color: #fff;
-  height: 100vh;
-  padding: 0 50px;
-}
-
 .content {
   margin-top: 80px;
 }

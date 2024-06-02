@@ -98,10 +98,12 @@ const sortTask = (status: btnStatus) => {
       <ButtonItem @click="addTask(inputValue)">Insert</ButtonItem>
     </div>
     <SortComponents @show-sort="sortTask" :activeBtn="activeBtn" />
-    <div class="task-list">
+    <div class="task-list" v-if="tasksMas.length > 0">
       <ListTasks :tasks="filterTodos" @complite-task="compliteTask" @delete-task="deleteItem" />
     </div>
-
+    <div v-else>
+      <h1 class="empty-list">The list of notes is empty</h1>
+    </div>
     <div class="statistic">{{ statistic }}</div>
   </div>
 </template>
@@ -135,5 +137,12 @@ const sortTask = (status: btnStatus) => {
   margin-top: 40px;
   font-size: 25px;
   opacity: 0.7;
+}
+
+.empty-list {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 50px;
+  text-align: center;
 }
 </style>
